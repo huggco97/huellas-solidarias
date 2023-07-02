@@ -12,43 +12,36 @@
 <body class="bg-[#E8EDE7]">
 <!-- Barra Navegacion -->
 <nav class="bg-gradient-to-r from-[#036280]  to-[#012e4a]">
-    
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <!-- Agrupa el logo y los botones en un solo div -->
-    <div class="flex h-16 items-center justify-between">
-        
-        <!-- logotipo -->
-        <a href="index.html" class="text-white flex items-center gap-2 font-bold"><img src="../../static/img/logo.png" alt="" class="h-12">Huellas Solidarias</a>
-        
-        <!-- Separa el logo de los botones -->
-        <div>
-            
-            <!-- Botones de la barra de Navegacion -->
-            <div class="flex space-x-4 items-center">
-            <a
-                href="index.html"
-                class="text-white rounded-md px-3 py-2 text-sm font-medium"
-                aria-current="page"
-                >Principal</a
-            >
-            <a
-                href="formulario-registro-animal.html"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Registra un Peludo</a
-            >
-            
-            <a
-                href="index.html"
-                class="text-gray-300 bg-red-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Cerrar Sesión</a
-            >
 
-            <img src="../../static/img/perro1.jpg" alt="" class="h-12 w-12 rounded-full">        
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <!-- Agrupa el logo y los botones en un solo div -->
+        <div class="flex h-16 items-center justify-between">
+
+            <!-- logotipo -->
+            <a href="/admin" class="text-white flex items-center gap-2"><img src="../static/img/logo.png"
+                    alt="" class="h-12">Huellas Solidarias</a>
+
+            <!-- Separa el logo de los botones -->
+            <div>
+
+                <!-- Botones de la barra de Navegacion -->
+                <div class="flex space-x-4 items-center">
+                    <a href="/admin" class="text-white rounded-md px-3 py-2 text-sm font-medium"
+                        aria-current="page">Principal</a>
+                    <a href="{{ url_for('animales') }}"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Registra
+                        un Peludo</a>
+
+                    <a href="/"
+                        class="text-gray-300 bg-red-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Cerrar
+                        Sesión</a>
+
+                    <img src="../static/img/perro1.png" alt="" class="h-12 w-12 rounded-full">
+                </div>
+
             </div>
 
         </div>
-
-    </div>
 
     </div>
 

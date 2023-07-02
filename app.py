@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///animales.db'
@@ -94,13 +95,17 @@ def animales():
 @app.route('/animales')
 def lista_animales():
     animales = Animal.query.all()
+    img_folder = 'static/img'
+    image_files = os.listdir(img_folder)
     print(animales)
-    return render_template('tarjetas.html', animales=animales)
+    print(animales[0].id)
+    return render_template('tarjetas.html', animales=animales , image_files=image_files)
 
 
 @app.route('/infoAnimales')
 def datos_animales():
     animales = Animal.query.all()
+
     print(animales)
     return render_template('perfil.html', animales=animales)
 
